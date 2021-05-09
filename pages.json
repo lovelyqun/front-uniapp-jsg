@@ -49,6 +49,9 @@
       }
     },
     {
+      "path": "pages/guid-feedback/guid-feedback"
+    },
+    {
       "path": "pages/web-view/web-view",
       "style": {
         "enablePullDownRefresh": true

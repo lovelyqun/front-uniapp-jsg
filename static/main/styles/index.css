@@ -6,7 +6,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  font-family: Source Han Sans CN, PingFangSC-Regular, PingFang SC, Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+  font-family: PingFangSC-Regular, PingFang SC, Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
 }
 
 html {
@@ -83,8 +83,8 @@ a {
 }
 
 .page-container {
-  padding: 30rpx;
-  padding-bottom: 30rpx;
+  padding: 32rpx;
+  padding-bottom: 32rpx;
   background-color: $pbc;
   min-height: 90vh;
   width: 100vw;
@@ -96,12 +96,8 @@ a {
   width: 100vw;
 }
 
-.c1 {
-  color: $mc1;
-}
-
 .title-1 {
-  font-size: 50rpx;
+  font-size: $fs1;
   font-weight: 600;
   color: $tc1;
   line-height: $fs1;

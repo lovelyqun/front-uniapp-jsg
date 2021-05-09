@@ -3,6 +3,7 @@ import Vuex from 'vuex'
 import config from "@/config";
 import card from './modules/welfare'
 import announce from './modules/community'
+import mine from './modules/mine'
 
 import {
   getAccountInfoApi,
