@@ -1,0 +1,1500 @@
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="never">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>闲时间前端开发规范</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+
+</head>
+
+<body class="no-navbar">
+<div id="home">
+    <div id="main">
+        <div id="mainContent">
+            <div class="forFlow">
+                <div id="post_detail">
+                    <!--done-->
+                    <div id="topics">
+                        <div class="post">
+                            <h1 class="postTitle">
+                                <a id="cb_post_title_url" class="postTitle2 vertical-middle">
+                                    <span>闲时间前端开发规范</span>
+                                </a>
+                            </h1>
+                            <div class="clear"></div>
+                            <div class="postBody">
+                                <div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
+                                    <p></p>
+                                    <div class="toc"
+                                         style="width:400px;position: fixed;top: 0;background-color: #FDFDFD;z-index: 9999;padding-left: 12px;
+                                                height: 100%;overflow-y: scroll">
+                                        <div class="toc-container-header">目录</div>
+                                        <ul>
+                                            <li><a href="#声明">声明</a></li>
+                                            <li><a href="#前端代码规范">前端代码规范</a></li>
+                                            <li><a href="#前端-js-项目开发规范">前端 JS 项目开发规范</a></li>
+                                            <li><a href="#一、编程规约">一、编程规约</a>
+                                                <ul>
+                                                    <li><a href="#一命名规范">(一)命名规范</a>
+                                                        <ul>
+                                                            <li><a href="#111-项目命名">1.1.1 项目命名</a></li>
+                                                            <li><a href="#112-目录命名">1.1.2 目录命名</a></li>
+                                                            <li><a href="#113-js、css、scss、html、png-文件命名">1.1.3
+                                                                JS、CSS、SCSS、HTML、PNG 文件命名</a></li>
+                                                            <li><a href="#114-命名严谨性">1.1.4 命名严谨性</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="#二html-规范-（vue-template-同样适用）">(二)HTML 规范 （Vue Template
+                                                        同样适用）</a>
+                                                        <ul>
+                                                            <li><a href="#121-html-类型">1.2.1 HTML 类型</a></li>
+                                                            <li><a href="#122-缩进">1.2.2 缩进</a></li>
+                                                            <li><a href="#123-分块注释">1.2.3 分块注释</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="#124-语义化标签">1.2.4 语义化标签</a>
+                                                        <ul>
+                                                            <li><a href="#125-引号">1.2.5 引号</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="#三-css-规范">(三) CSS 规范</a>
+                                                        <ul>
+                                                            <li><a href="#131-命名">1.3.1 命名</a></li>
+                                                            <li><a href="#132-选择器">1.3.2 选择器</a></li>
+                                                            <li><a href="#133-尽量使用缩写属性">1.3.3 尽量使用缩写属性</a></li>
+                                                            <li><a href="#134-每个选择器及属性独占一行">1.3.4 每个选择器及属性独占一行</a></li>
+                                                            <li><a href="#135-省略0后面的单位">1.3.5 省略0后面的单位</a></li>
+                                                            <li><a href="#136-避免使用id选择器及全局标签选择器防止污染全局样式">1.3.6
+                                                                避免使用ID选择器及全局标签选择器防止污染全局样式</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="#四-less-规范">(四) LESS 规范</a>
+                                                        <ul>
+                                                            <li><a href="#141-代码组织">1.4.1 代码组织</a>
+                                                                <ul>
+                                                                    <li><a href="#1将公共less文件放置在stylelesscommon文件夹">1)将公共less文件放置在style/less/common文件夹</a>
+                                                                    </li>
+                                                                    <li><a href="#2按以下顺序组织">2)按以下顺序组织</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li><a href="#142-避免嵌套层级过多">1.4.2 避免嵌套层级过多</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="#五-javascript-规范">(五) Javascript 规范</a>
+                                                        <ul>
+                                                            <li><a href="#151-命名">1.5.1 命名</a>
+                                                                <ul>
+                                                                    <li>
+                                                                        <a href="#1-采用小写驼峰命名-lowercamelcase，代码中的命名均不能以下划线，也不能以下划线或美元符号结束">1)
+                                                                            采用小写驼峰命名
+                                                                            lowerCamelCase，代码中的命名均不能以下划线，也不能以下划线或美元符号结束</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#2-方法名、参数名、成员变量、局部变量都统一使用-lowercamelcase-风格，必须遵从驼峰形式。">2)
+                                                                            方法名、参数名、成员变量、局部变量都统一使用 lowerCamelCase
+                                                                            风格，必须遵从驼峰形式。</a></li>
+                                                                    <li>
+                                                                        <a href="#3-常量命名全部大写，单词间用下划线隔开，力求语义表达完整清楚，不要嫌名字长。">3)
+                                                                            常量命名全部大写，单词间用下划线隔开，力求语义表达完整清楚，不要嫌名字长。</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li><a href="#152-代码格式">1.5.2 代码格式</a>
+                                                                <ul>
+                                                                    <li><a href="#1-使用-2-个空格进行缩进">1) 使用 2 个空格进行缩进</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="#2-不同逻辑、不同语义、不同业务的代码之间插入一个空行分隔开来以提升可读性。">2)
+                                                                            不同逻辑、不同语义、不同业务的代码之间插入一个空行分隔开来以提升可读性。</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li><a href="#153-字符串">1.5.3 字符串</a></li>
+                                                            <li><a href="#154-对象声明">1.5.4 对象声明</a>
+                                                                <ul>
+                                                                    <li><a href="#1使用字面值创建对象">1)使用字面值创建对象</a></li>
+                                                                    <li><a href="#2-使用字面量来代替对象构造器">2) 使用字面量来代替对象构造器</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li><a href="#155-使用-es67">1.5.5 使用 ES6,7</a></li>
+                                                            <li><a href="#156-括号">1.5.6 括号</a></li>
+                                                            <li><a href="#157-undefined-判断">1.5.7 undefined 判断</a></li>
+                                                            <li><a href="#158-条件判断和循环最多三层">1.5.8 条件判断和循环最多三层</a></li>
+                                                            <li><a href="#159-this-的转换命名">1.5.9 this 的转换命名</a></li>
+                                                            <li><a href="#1510-慎用-consolelog">1.5.10 慎用 console.log</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#二、vue-项目规范">二、Vue 项目规范</a>
+                                                <ul>
+                                                    <li><a href="#一-vue-编码基础">(一) Vue 编码基础</a>
+                                                        <ul>
+                                                            <li><a href="#211-组件规范">2.1.1. 组件规范</a>
+                                                                <ul>
+                                                                    <li><a href="#1-组件名为多个单词。">1) 组件名为多个单词。</a></li>
+                                                                    <li><a href="#2-组件文件名为-pascal-case-格式">2) 组件文件名为
+                                                                        pascal-case 格式</a></li>
+                                                                    <li><a href="#3-基础组件文件名为-base-开头，使用完整单词而不是缩写。">3)
+                                                                        基础组件文件名为 base 开头，使用完整单词而不是缩写。</a></li>
+                                                                    <li><a href="#4-和父组件紧密耦合的子组件应该以父组件名作为前缀命名">4)
+                                                                        和父组件紧密耦合的子组件应该以父组件名作为前缀命名</a></li>
+                                                                    <li>
+                                                                        <a href="#5-在-template-模版中使用组件，应使用-pascalcase-模式，并且使用自闭合组件。">5)
+                                                                            在 Template 模版中使用组件，应使用 PascalCase
+                                                                            模式，并且使用自闭合组件。</a></li>
+                                                                    <li><a href="#6-组件的-data-必须是一个函数">6) 组件的 data
+                                                                        必须是一个函数</a></li>
+                                                                    <li><a href="#7-prop-定义应该尽量详细">7) Prop 定义应该尽量详细</a>
+                                                                    </li>
+                                                                    <li><a href="#8-为组件样式设置作用域">8) 为组件样式设置作用域</a></li>
+                                                                    <li><a href="#9-如果特性元素较多，应该主动换行。">9)
+                                                                        如果特性元素较多，应该主动换行。</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li><a href="#212-模板中使用简单的表达式">2.1.2. 模板中使用简单的表达式</a></li>
+                                                            <li><a href="#213-指令都使用缩写形式">2.1.3 指令都使用缩写形式</a></li>
+                                                            <li><a href="#214-标签顺序保持一致">2.1.4 标签顺序保持一致</a></li>
+                                                            <li><a href="#215-必须为-v-for-设置键值-key">2.1.5 必须为 v-for 设置键值
+                                                                key</a></li>
+                                                            <li><a href="#216-v-show-与-v-if-选择">2.1.6 v-show 与 v-if
+                                                                选择</a></li>
+                                                            <li><a href="#217-script-标签内部结构顺序">2.1.7 script 标签内部结构顺序</a>
+                                                            </li>
+                                                            <li><a href="#218-vue-router-规范">2.1.8 Vue Router 规范</a>
+                                                                <ul>
+                                                                    <li><a href="#1-页面跳转数据传递使用路由参数">1)
+                                                                        页面跳转数据传递使用路由参数</a></li>
+                                                                    <li><a href="#2-使用路由懒加载（延迟加载）机制">2)
+                                                                        使用路由懒加载（延迟加载）机制</a></li>
+                                                                    <li><a href="#3-router-中的命名规范">3) router 中的命名规范</a>
+                                                                    </li>
+                                                                    <li><a href="#4-router-中的-path-命名规范">4) router 中的
+                                                                        path 命名规范</a></li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="#二-vue-项目目录规范">(二) Vue 项目目录规范</a>
+                                                        <ul>
+                                                            <li><a href="#221-基础">2.2.1 基础</a></li>
+                                                            <li><a href="#222-使用-vue-cli-脚手架">2.2.2 使用 Vue-cli 脚手架</a>
+                                                            </li>
+                                                            <li><a href="#223-目录说明">2.2.3 目录说明</a>
+                                                                <ul>
+                                                                    <li><a href="#1-api-目录">1) api 目录</a></li>
+                                                                    <li><a href="#2-assets-目录">2) assets 目录</a></li>
+                                                                    <li><a href="#3-components-目录">3) components 目录</a>
+                                                                    </li>
+                                                                    <li><a href="#4-constants-目录">4) constants 目录</a>
+                                                                    </li>
+                                                                    <li><a href="#5-router-与-store-目录">5) router 与 store
+                                                                        目录</a></li>
+                                                                    <li><a href="#6-views-目录">6) views 目录</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li><a href="#224-注释说明">2.2.4 注释说明</a></li>
+                                                            <li><a href="#225-其他">2.2.5 其他</a>
+                                                                <ul>
+                                                                    <li><a href="#1-尽量不要手动操作-dom">1) 尽量不要手动操作 DOM</a>
+                                                                    </li>
+                                                                    <li><a href="#2-删除无用代码">2) 删除无用代码</a></li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div style="padding-left: 430px;">
+                                        <p></p>
+                                        <h1 id="前端代码规范">前端代码规范</h1>
+                                        <p>Front Standard Guide</p>
+                                        <h1 id="前端-js-项目开发规范">前端 JS 项目开发规范</h1>
+                                        <p>规范的目的是为了编写高质量的代码，让你的团队成员每天得心情都是愉悦的，大家在一起是快乐的。</p>
+                                        <p>引自《闲时间规约》的开头片段：</p>
+                                        <p><em>----现代软件架构的复杂性需要协同开发完成，如何高效地协同呢？无规矩不成方圆，无规范难以协同，比如，制订交通法规表面上是要限制行车权，实际上是保障公众的人身安全，试想如果没有限速，没有红绿灯，谁还敢上路行驶。对软件来说，适当的规范和标准绝不是消灭代码内容的创造性、优雅性，而是限制过度个性化，以一种普遍认可的统一方式一起做事，提升协作效率，降低沟通成本。代码的字里行间流淌的是软件系统的血液，质量的提升是尽可能少踩坑，杜绝踩重复的坑，切实提升系统稳定性，码出质量。</em>
+                                        </p>
+                                        <h1 id="一、编程规约">一、编程规约</h1>
+                                        <h3 id="一命名规范">(一)命名规范</h3>
+                                        <h4 id="111-项目命名">1.1.1 项目命名</h4>
+                                        <p>全部采用小写方式， 以中划线分隔。</p>
+                                        <p>正例：<code>mall-management-system</code></p>
+                                        <p>反例：<code>mall_management-system / mallManagementSystem</code></p>
+                                        <h4 id="112-目录命名">1.1.2 目录命名</h4>
+                                        <p>全部采用小写方式， 以中划线分隔，有复数结构时，要采用复数命名法， 缩写不用复数</p>
+                                        <p>正例： <code>scripts / styles / components / images / utils / layouts /
+                                            demo-styles
+                                            / demo-scripts / img / doc</code></p>
+                                        <p>反例： <code>script / style / demo_scripts / demoStyles / imgs / docs</code></p>
+                                        <p>【特殊】VUE 的项目中的 components 中的组件目录，使用 kebab-case 命名</p>
+                                        <p>正例： <code>head-search / page-loading / authorized / notice-icon</code></p>
+                                        <p>反例： <code>HeadSearch / PageLoading</code></p>
+                                        <p>【特殊】VUE 的项目中的除 components 组件目录外的所有目录也使用 kebab-case 命名<br>
+                                            正例： <code>page-one / shopping-car / user-management</code></p>
+                                        <p>反例： <code>ShoppingCar / UserManagement</code></p>
+                                        <h4 id="113-js、css、scss、html、png-文件命名">1.1.3 JS、CSS、SCSS、HTML、PNG 文件命名</h4>
+                                        <p>全部采用小写方式， 以中划线分隔</p>
+                                        <p>正例： <code>render-dom.js / signup.css / index.html / company-logo.png</code>
+                                        </p>
+                                        <p>反例： <code>renderDom.js / UserManagement.html</code></p>
+                                        <h4 id="114-命名严谨性">1.1.4 命名严谨性</h4>
+                                        <p>代码中的命名严禁使用拼音与英文混合的方式，更不允许直接使用中文的方式。
+                                            说明：正确的英文拼写和语法可以让阅读者易于理解，避免歧义。注意，即使纯拼音命名方式也要避免采用</p>
+                                        <p>正例：<code>henan / luoyang / rmb 等国际通用的名称，可视同英文。</code></p>
+                                        <p>反例：<code>DaZhePromotion [打折] / getPingfenByName() [评分] / int 某变量 = 3</code>
+                                        </p>
+                                        <p><strong>杜绝完全不规范的缩写，避免望文不知义：</strong></p>
+                                        <p>反例：AbstractClass“缩写”命名成 AbsClass；condition“缩写”命名成
+                                            condi，此类随意缩写严重降低了代码的可阅读性。</p>
+                                        <h3 id="二html-规范-（vue-template-同样适用）">(二)HTML 规范 （Vue Template 同样适用）</h3>
+                                        <h4 id="121-html-类型">1.2.1 HTML 类型</h4>
+                                        <p>推荐使用 HTML5 的文档类型申明： .<br>
+                                            （建议使用 text/html 格式的 HTML。避免使用 XHTML。XHTML 以及它的属性，比如 application/xhtml+xml
+                                            在浏览器中的应用支持与优化空间都十分有限）。</p>
+                                        <ul>
+                                            <li>规定字符编码</li>
+                                            <li>IE 兼容模式</li>
+                                            <li>规定字符编码</li>
+                                            <li>doctype 大写</li>
+
+
+                                        </ul>
+                                        <p>正例：</p>
+                                        <pre><code class="hljs xml"><span class="hljs-meta">&lt;!DOCTYPE <span
+                                                class="hljs-meta-keyword">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">http-equiv</span>=<span
+            class="hljs-string">"X-UA-Compatible"</span> <span class="hljs-attr">content</span>=<span
+            class="hljs-string">"IE=Edge"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span
+            class="hljs-string">"UTF-8"</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Page title<span
+                                                    class="hljs-tag">&lt;/<span
+                                                    class="hljs-name">title</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span
+            class="hljs-string">"images/company-logo.png"</span> <span class="hljs-attr">alt</span>=<span
+            class="hljs-string">"Company"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+                                        <h4 id="122-缩进">1.2.2 缩进</h4>
+                                        <p>缩进使用 2 个空格（一个 tab）</p>
+                                        <p>嵌套的节点应该缩进。</p>
+                                        <h4 id="123-分块注释">1.2.3 分块注释</h4>
+                                        <p>在每一个块状元素，列表元素和表格元素后，加上一对 HTML 注释。注释格式</p>
+
+                                        <h3 id="124-语义化标签">1.2.4 语义化标签</h3>
+                                        <p>HTML5 中新增很多语义化标签，所以优先使用语义化标签，避免一个页面都是 div 或者 p 标签</p>
+                                        <p>正例</p>
+                                        <pre><code class="hljs apache"><span
+                                                class="hljs-section">&lt;header&gt;</span><span
+                                                class="hljs-section">&lt;/header&gt;</span>
+<span class="hljs-section">&lt;footer&gt;</span><span class="hljs-section">&lt;/footer&gt;</span>
+</code></pre>
+                                        <p>反例</p>
+                                        <pre><code class="hljs apache"><span class="hljs-section">&lt;div&gt;</span>
+  <span class="hljs-section">&lt;p&gt;</span><span class="hljs-section">&lt;/p&gt;</span>
+<span class="hljs-section">&lt;/div&gt;</span>
+</code></pre>
+                                        <h4 id="125-引号">1.2.5 引号</h4>
+                                        <p>使用双引号(" ") 而不是单引号(’ ') 。</p>
+                                        <p>正例： ``</p>
+                                        <p>反例： ``</p>
+                                        <h3 id="三-css-规范">(三) CSS 规范</h3>
+                                        <h4 id="131-命名">1.3.1 命名</h4>
+                                        <ul>
+                                            <li>类名使用小写字母，以中划线分隔</li>
+                                            <li>id 采用驼峰式命名</li>
+                                            <li>scss 中的变量、函数、混合、placeholder 采用驼峰式命名</li>
+                                        </ul>
+                                        <p>ID 和 class 的名称总是使用可以反应元素目的和用途的名称，或其他通用的名称，代替表象和晦涩难懂的名称</p>
+                                        <p>不推荐：</p>
+                                        <pre><code class="hljs css"><span class="hljs-selector-class">.fw-800</span> {
+  <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">800</span>;
+}
+
+<span class="hljs-selector-class">.red</span> {
+  <span class="hljs-attribute">color</span>: red;
+}
+</code></pre>
+                                        <p>推荐:</p>
+                                        <pre><code class="hljs css"><span class="hljs-selector-class">.heavy</span> {
+  <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">800</span>;
+}
+
+<span class="hljs-selector-class">.important</span> {
+  <span class="hljs-attribute">color</span>: red;
+}
+</code></pre>
+                                        <h4 id="132-选择器">1.3.2 选择器</h4>
+                                        <p>1)css 选择器中避免使用标签名<br>
+                                            从结构、表现、行为分离的原则来看，应该尽量避免 css 中出现 HTML 标签，并且在 css 选择器中出现标签名会存在潜在的问题。</p>
+                                        <p>2)很多前端开发人员写选择器链的时候不使用
+                                            直接子选择器（注：直接子选择器和后代选择器的区别）。有时，这可能会导致疼痛的设计问题并且有时候可能会很耗性能。然而，在任何情况下，这是一个非常不好的做法。如果你不写很通用的，需要匹配到
+                                            DOM 末端的选择器， 你应该总是考虑直接子选择器。</p>
+                                        <p>不推荐:</p>
+                                        <pre><code class="hljs css"><span
+                                                class="hljs-selector-class">.content</span> <span
+                                                class="hljs-selector-class">.title</span> {
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">2rem</span>;
+}
+</code></pre>
+                                        <p>推荐:</p>
+                                        <pre><code class="hljs css"><span
+                                                class="hljs-selector-class">.content</span> &gt; <span
+                                                class="hljs-selector-class">.title</span> {
+  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">2rem</span>;
+}
+</code></pre>
+                                        <h4 id="133-尽量使用缩写属性">1.3.3 尽量使用缩写属性</h4>
+                                        <p>不推荐：</p>
+                                        <pre><code class="hljs scss"><span
+                                                class="hljs-attribute">border-top-style</span>: none;
+<span class="hljs-attribute">font-family</span>: palatino, georgia, serif;
+<span class="hljs-attribute">font-size</span>: <span class="hljs-number">100%</span>;
+<span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.6</span>;
+<span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">2em</span>;
+<span class="hljs-attribute">padding-left</span>: <span class="hljs-number">1em</span>;
+<span class="hljs-attribute">padding-right</span>: <span class="hljs-number">1em</span>;
+<span class="hljs-attribute">padding-top</span>: <span class="hljs-number">0</span>;
+</code></pre>
+                                        <p>推荐：</p>
+                                        <pre><code class="hljs apache"><span
+                                                class="hljs-attribute">border</span>-top: <span
+                                                class="hljs-number">0</span>;
+<span class="hljs-attribute">font</span>: <span class="hljs-number">100</span>%/<span class="hljs-number">1</span>.<span
+                                                    class="hljs-number">6</span> palatino, georgia, serif;
+<span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span> <span
+                                                    class="hljs-number">1</span>em <span class="hljs-number">2</span>em;
+</code></pre>
+                                        <h4 id="134-每个选择器及属性独占一行">1.3.4 每个选择器及属性独占一行</h4>
+                                        <p>不推荐：</p>
+                                        <pre><code class="hljs css"><span class="hljs-selector-tag">button</span>{
+  <span class="hljs-attribute">width</span>:<span class="hljs-number">100px</span>;<span
+                                                    class="hljs-attribute">height</span>:<span
+                                                    class="hljs-number">50px</span>;<span
+                                                    class="hljs-attribute">color</span>:<span
+                                                    class="hljs-number">#fff</span>;<span
+                                                    class="hljs-attribute">background</span>:<span class="hljs-number">#00a0e9</span>;
+}
+</code></pre>
+                                        <p>推荐：</p>
+                                        <pre><code class="hljs css"><span class="hljs-selector-tag">button</span>{
+  <span class="hljs-attribute">width</span>:<span class="hljs-number">100px</span>;
+  <span class="hljs-attribute">height</span>:<span class="hljs-number">50px</span>;
+  <span class="hljs-attribute">color</span>:<span class="hljs-number">#fff</span>;
+  <span class="hljs-attribute">background</span>:<span class="hljs-number">#00a0e9</span>;
+}
+</code></pre>
+                                        <h4 id="135-省略0后面的单位">1.3.5 省略0后面的单位</h4>
+                                        <p>不推荐：</p>
+                                        <pre><code class="hljs css"><span class="hljs-selector-tag">div</span>{
+  <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">0px</span>;
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0em</span>;
+}
+</code></pre>
+                                        <p>推荐：</p>
+                                        <pre><code class="hljs css"><span class="hljs-selector-tag">div</span>{
+  <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">0</span>;
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+}
+</code></pre>
+                                        <h4 id="136-避免使用id选择器及全局标签选择器防止污染全局样式">1.3.6 避免使用ID选择器及全局标签选择器防止污染全局样式</h4>
+                                        <p>不推荐：</p>
+                                        <pre><code class="hljs css"><span class="hljs-selector-id">#header</span>{
+  <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">0px</span>;
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0em</span>;
+}
+</code></pre>
+                                        <p>推荐：</p>
+                                        <pre><code class="hljs css"><span class="hljs-selector-class">.header</span>{
+  <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">0px</span>;
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0em</span>;
+}
+</code></pre>
+                                        <h3 id="四-less-规范">(四) LESS 规范</h3>
+                                        <h4 id="141-代码组织">1.4.1 代码组织</h4>
+                                        <h5 id="1将公共less文件放置在stylelesscommon文件夹">1)将公共less文件放置在style/less/common文件夹</h5>
+                                        <p>例:// color.less,common.less</p>
+                                        <h5 id="2按以下顺序组织">2)按以下顺序组织</h5>
+                                        <p>1、@import;<br>
+                                            2、变量声明;<br>
+                                            3、样式声明;</p>
+                                        <pre><code class="hljs less"><span class="hljs-keyword">@import</span> <span
+                                                class="hljs-string">"mixins/size.less"</span>;
+
+<span class="hljs-variable">@default-text-color:</span> <span class="hljs-number">#333</span>;
+
+<span class="hljs-selector-class">.page</span> {
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">960px</span>;
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> auto;
+}
+</code></pre>
+                                        <h4 id="142-避免嵌套层级过多">1.4.2 避免嵌套层级过多</h4>
+                                        <p>将嵌套深度限制在3级。对于超过4级的嵌套，给予重新评估。这可以避免出现过于详实的CSS选择器。<br>
+                                            避免大量的嵌套规则。当可读性受到影响时，将之打断。推荐避免出现多于20行的嵌套规则出现</p>
+                                        <p>不推荐：</p>
+                                        <pre><code class="hljs x86asm"><span class="hljs-meta">.main</span>{
+<span class="hljs-meta">  .title</span>{
+<span class="hljs-meta">    .name</span>{
+<span class="hljs-symbol">       color:</span>#fff
+    }
+  }
+}
+</code></pre>
+                                        <p>推荐：</p>
+                                        <pre><code class="hljs less"><span
+                                                class="hljs-selector-class">.main-title</span>{
+   <span class="hljs-selector-class">.name</span>{
+      <span class="hljs-attribute">color</span>:<span class="hljs-number">#fff</span>
+   }
+}
+</code></pre>
+                                        <h3 id="五-javascript-规范">(五) Javascript 规范</h3>
+                                        <h4 id="151-命名">1.5.1 命名</h4>
+                                        <h5 id="1-采用小写驼峰命名-lowercamelcase，代码中的命名均不能以下划线，也不能以下划线或美元符号结束">1) 采用小写驼峰命名
+                                            lowerCamelCase，代码中的命名均不能以下划线，也不能以下划线或美元符号结束</h5>
+                                        <p>反例： <code>_name / name_ / name$</code></p>
+                                        <h5 id="2-方法名、参数名、成员变量、局部变量都统一使用-lowercamelcase-风格，必须遵从驼峰形式。">2)
+                                            方法名、参数名、成员变量、局部变量都统一使用 lowerCamelCase 风格，必须遵从驼峰形式。</h5>
+                                        <p>正例： <code>localValue / getHttpMessage() / inputUserId</code></p>
+                                        <p>*<em><strong>其中 method 方法命名必须是 动词 或者 动词+名词 形式*</strong></em></p>
+                                        <p>正例：<code>saveShopCarData /openShopCarInfoDialog</code></p>
+                                        <p>反例：<code>save / open / show / go</code></p>
+                                        <p>*<em><strong>特此说明，增删查改，详情统一使用如下 5 个单词，不得使用其他（目的是为了统一各个端）*</strong></em></p>
+                                        <pre><code class="hljs sql">add / <span
+                                                class="hljs-keyword">update</span> / <span
+                                                class="hljs-keyword">delete</span> / detail / <span
+                                                class="hljs-keyword">get</span>
+</code></pre>
+                                        <p><strong>附： 函数方法常用的动词:</strong></p>
+                                        <pre><code class="hljs sql">get 获取/<span class="hljs-keyword">set</span> 设置,
+<span class="hljs-keyword">add</span> 增加/remove 删除
+<span class="hljs-keyword">create</span> 创建/destory 移除
+<span class="hljs-keyword">start</span> 启动/<span class="hljs-keyword">stop</span> 停止
+<span class="hljs-keyword">open</span> 打开/<span class="hljs-keyword">close</span> 关闭,
+<span class="hljs-keyword">read</span> 读取/write 写入
+<span class="hljs-keyword">load</span> 载入/<span class="hljs-keyword">save</span> 保存,
+<span class="hljs-keyword">create</span> 创建/destroy 销毁
+<span class="hljs-keyword">begin</span> 开始/<span class="hljs-keyword">end</span> 结束,
+<span class="hljs-keyword">backup</span> 备份/<span class="hljs-keyword">restore</span> 恢复
+<span class="hljs-keyword">import</span> 导入/<span class="hljs-keyword">export</span> 导出,
+<span class="hljs-keyword">split</span> 分割/<span class="hljs-keyword">merge</span> 合并
+inject 注入/<span class="hljs-keyword">extract</span> 提取,
+attach 附着/detach 脱离
+bind 绑定/separate 分离,
+<span class="hljs-keyword">view</span> 查看/browse 浏览
+edit 编辑/<span class="hljs-keyword">modify</span> 修改,
+<span class="hljs-keyword">select</span> 选取/mark 标记
+copy 复制/paste 粘贴,
+<span class="hljs-keyword">undo</span> 撤销/<span class="hljs-keyword">redo</span> 重做
+<span class="hljs-keyword">insert</span> 插入/<span class="hljs-keyword">delete</span> 移除,
+<span class="hljs-keyword">add</span> 加入/append 添加
+clean 清理/<span class="hljs-keyword">clear</span> 清除,
+<span class="hljs-keyword">index</span> 索引/<span class="hljs-keyword">sort</span> 排序
+find 查找/<span class="hljs-keyword">search</span> 搜索,
+increase 增加/decrease 减少
+play 播放/pause 暂停,
+launch 启动/run 运行
+compile 编译/<span class="hljs-keyword">execute</span> 执行,
+debug 调试/<span class="hljs-keyword">trace</span> 跟踪
+observe 观察/listen 监听,
+<span class="hljs-keyword">build</span> 构建/publish 发布
+<span class="hljs-keyword">input</span> 输入/<span class="hljs-keyword">output</span> 输出,
+<span class="hljs-keyword">encode</span> 编码/<span class="hljs-keyword">decode</span> 解码
+<span class="hljs-keyword">encrypt</span> 加密/<span class="hljs-keyword">decrypt</span> 解密,
+<span class="hljs-keyword">compress</span> 压缩/decompress 解压缩
+pack 打包/unpack 解包,
+<span class="hljs-keyword">parse</span> 解析/emit 生成
+<span class="hljs-keyword">connect</span> 连接/<span class="hljs-keyword">disconnect</span> 断开,
+send 发送/receive 接收
+download 下载/upload 上传,
+<span class="hljs-keyword">refresh</span> 刷新/synchronize 同步
+<span class="hljs-keyword">update</span> 更新/revert 复原,
+<span class="hljs-keyword">lock</span> 锁定/<span class="hljs-keyword">unlock</span> 解锁
+<span class="hljs-keyword">check</span> <span class="hljs-keyword">out</span> 签出/<span class="hljs-keyword">check</span> <span
+                                                    class="hljs-keyword">in</span> 签入,
+submit 提交/<span class="hljs-keyword">commit</span> 交付
+push 推/pull 拉,
+expand 展开/collapse 折叠
+<span class="hljs-keyword">begin</span> 起始/<span class="hljs-keyword">end</span> 结束,
+<span class="hljs-keyword">start</span> 开始/<span class="hljs-keyword">finish</span> 完成
+enter 进入/<span class="hljs-keyword">exit</span> 退出,
+<span class="hljs-keyword">abort</span> 放弃/quit 离开
+obsolete 废弃/depreciate 废旧,
+<span class="hljs-keyword">collect</span> 收集/<span class="hljs-keyword">aggregate</span> 聚集
+</code></pre>
+                                        <h5 id="3-常量命名全部大写，单词间用下划线隔开，力求语义表达完整清楚，不要嫌名字长。">3)
+                                            常量命名全部大写，单词间用下划线隔开，力求语义表达完整清楚，不要嫌名字长。</h5>
+                                        <p>正例： <code>MAX_STOCK_COUNT</code></p>
+                                        <p>反例： <code>MAX_COUNT</code></p>
+                                        <h4 id="152-代码格式">1.5.2 代码格式</h4>
+                                        <h5 id="1-使用-2-个空格进行缩进">1) 使用 2 个空格进行缩进</h5>
+                                        <p>正例：</p>
+                                        <pre><code class="hljs nginx"><span class="hljs-attribute">if</span> (x &lt; y) {
+  <span class="hljs-attribute">x</span> += <span class="hljs-number">10</span>;
+} <span class="hljs-section">else</span> {
+  <span class="hljs-attribute">x</span> += <span class="hljs-number">1</span>;
+}
+</code></pre>
+                                        <h5 id="2-不同逻辑、不同语义、不同业务的代码之间插入一个空行分隔开来以提升可读性。">2)
+                                            不同逻辑、不同语义、不同业务的代码之间插入一个空行分隔开来以提升可读性。</h5>
+                                        <blockquote>
+                                            <p>说明：任何情形，没有必要插入多个空行进行隔开。</p>
+                                        </blockquote>
+                                        <h4 id="153-字符串">1.5.3 字符串</h4>
+                                        <p>统一使用单引号(‘)，不使用双引号(“)。这在创建 HTML 字符串非常有好处：</p>
+                                        <p>正例:</p>
+                                        <pre><code class="hljs vbnet"><span class="hljs-keyword">let</span> str = <span
+                                                class="hljs-comment">'foo';</span>
+<span class="hljs-keyword">let</span> testDiv = <span class="hljs-comment">'<span class="hljs-doctag">&lt;div id="test"&gt;</span><span
+                                                    class="hljs-doctag">&lt;/div&gt;</span>';</span>
+</code></pre>
+                                        <p>反例:</p>
+                                        <pre><code class="hljs rust"><span class="hljs-keyword">let</span> <span
+                                                class="hljs-built_in">str</span> = <span class="hljs-symbol">'foo</span>';
+<span class="hljs-keyword">let</span> testDiv = <span class="hljs-string">"&lt;div id='test'&gt;&lt;/div&gt;"</span>;
+</code></pre>
+                                        <h4 id="154-对象声明">1.5.4 对象声明</h4>
+                                        <h5 id="1使用字面值创建对象">1)使用字面值创建对象</h5>
+                                        <p>正例： <code>let user = {};</code></p>
+                                        <p>反例： <code>let user = new Object();</code></p>
+                                        <h5 id="2-使用字面量来代替对象构造器">2) 使用字面量来代替对象构造器</h5>
+                                        <p>正例：</p>
+                                        <pre><code class="hljs yaml"><span class="hljs-string">var</span> <span
+                                                class="hljs-string">user</span> <span class="hljs-string">=</span> {
+  <span class="hljs-attr">age:</span> <span class="hljs-number">0</span>,
+  <span class="hljs-attr">name:</span> <span class="hljs-number">1</span>,
+  <span class="hljs-attr">city:</span> <span class="hljs-number">3</span>
+}<span class="hljs-string">;</span>
+</code></pre>
+                                        <p>反例：</p>
+                                        <pre><code class="hljs dockerfile">var <span class="hljs-keyword">user</span> = new Object();
+<span class="hljs-keyword">user</span>.age = <span class="hljs-number">0</span>;
+<span class="hljs-keyword">user</span>.name = <span class="hljs-number">0</span>;
+<span class="hljs-keyword">user</span>.city = <span class="hljs-number">0</span>;
+</code></pre>
+                                        <h4 id="155-使用-es67">1.5.5 使用 ES6,7</h4>
+                                        <p>必须优先使用 ES6,7 中新增的语法糖和函数。这将简化你的程序，并让你的代码更加灵活和可复用。</p>
+                                        <blockquote>
+                                            <p>必须强制使用 ES6, ES7 的新语法，比如箭头函数、await/async ， 解构， let ， for…of 等等</p>
+                                        </blockquote>
+                                        <h4 id="156-括号">1.5.6 括号</h4>
+                                        <p>下列关键字后必须有大括号（即使代码块的内容只有一行）：if, else, for, while, do, switch, try, catch,
+                                            finally,
+                                            with。</p>
+                                        <p>正例：</p>
+                                        <pre><code class="hljs less"><span class="hljs-selector-tag">if</span> (condition) {
+  <span class="hljs-selector-tag">doSomething</span>();
+}
+</code></pre>
+                                        <p>反例：</p>
+                                        <pre><code class="hljs lisp">if (<span class="hljs-name">condition</span>) doSomething()<span
+                                                class="hljs-comment">;</span>
+</code></pre>
+                                        <h4 id="157-undefined-判断">1.5.7 undefined 判断</h4>
+                                        <p>永远不要直接使用 undefined 进行变量判断；使用 typeof 和字符串’undefined’对变量进行判断。</p>
+                                        <p>正例：</p>
+                                        <pre><code class="hljs coffeescript"><span class="hljs-keyword">if</span> (<span
+                                                class="hljs-keyword">typeof</span> person === <span class="hljs-string">'undefined'</span>) {
+    ...
+}
+</code></pre>
+                                        <p>反例：</p>
+                                        <pre><code class="hljs coffeescript"><span class="hljs-keyword">if</span> (person === <span
+                                                class="hljs-literal">undefined</span>) {
+    ...
+}
+</code></pre>
+                                        <h4 id="158-条件判断和循环最多三层">1.5.8 条件判断和循环最多三层</h4>
+                                        <p>条件判断能使用三目运算符和逻辑运算符解决的，就不要使用条件判断，但是谨记不要写太长的三目运算符。如果超过 3 层请抽成函数，并写清楚注释。</p>
+                                        <h4 id="159-this-的转换命名">1.5.9 this 的转换命名</h4>
+                                        <p>对上下文 this 的引用只能使用’self’来命名</p>
+                                        <h4 id="1510-慎用-consolelog">1.5.10 慎用 console.log</h4>
+                                        <p>因 console.log 大量使用会有性能问题，所以在非 webpack 项目中谨慎使用 log 功能</p>
+                                        <h1 id="二、vue-项目规范">二、Vue 项目规范</h1>
+                                        <h3 id="一-vue-编码基础">(一) Vue 编码基础</h3>
+                                        <p>vue 项目规范以 Vue 官方规范 （<a href="https://cn.vuejs.org/v2/style-guide/%EF%BC%89"
+                                                                  target="_blank">https://cn.vuejs.org/v2/style-guide/）</a>
+                                            中的 A 规范为基础，在其上面进行项目开发，故所有代码均遵守该规范。</p>
+                                        <blockquote>
+                                            <p>请仔仔细细阅读 Vue 官方规范，切记，此为第一步。</p>
+                                        </blockquote>
+                                        <h4 id="211-组件规范">2.1.1. 组件规范</h4>
+                                        <h5 id="1-组件名为多个单词。">1) 组件名为多个单词。</h5>
+                                        <p>组件名应该始终是多个单词组成（大于等于 2），且命名规范为<code>KebabCase</code>格式。<br>
+                                            这样做可以避免跟现有的以及未来的 HTML 元素相冲突，因为所有的 HTML 元素名称都是单个单词的。</p>
+                                        <p>正例：</p>
+                                        <pre><code class="hljs css"><span class="hljs-selector-tag">export</span> <span
+                                                class="hljs-selector-tag">default</span> {
+  <span class="hljs-attribute">name</span>: <span class="hljs-string">'TodoItem'</span>
+  // ...
+};
+</code></pre>
+                                        <p>反例：</p>
+                                        <pre><code class="hljs css"><span class="hljs-selector-tag">export</span> <span
+                                                class="hljs-selector-tag">default</span> {
+  <span class="hljs-attribute">name</span>: <span class="hljs-string">'Todo'</span>,
+  // ...
+}
+<span class="hljs-selector-tag">export</span> <span class="hljs-selector-tag">default</span> {
+  <span class="hljs-attribute">name</span>: <span class="hljs-string">'todo-item'</span>,
+  // ...
+}
+</code></pre>
+                                        <h5 id="2-组件文件名为-pascal-case-格式">2) 组件文件名为 pascal-case 格式</h5>
+                                        <p>正例：</p>
+                                        <pre><code class="hljs perl">components/
+|- <span class="hljs-keyword">my</span>-component.vue
+</code></pre>
+                                        <p>反例：</p>
+                                        <pre><code class="hljs ruby">components/
+<span class="hljs-params">|- myComponent.vue
+|</span>- MyComponent.vue
+</code></pre>
+                                        <h5 id="3-基础组件文件名为-base-开头，使用完整单词而不是缩写。">3) 基础组件文件名为 base 开头，使用完整单词而不是缩写。</h5>
+                                        <p>正例：</p>
+                                        <pre><code class="hljs csharp">components/
+|- <span class="hljs-keyword">base</span>-button.vue
+|- <span class="hljs-keyword">base</span>-table.vue
+|- <span class="hljs-keyword">base</span>-icon.vue
+</code></pre>
+                                        <p>反例：</p>
+                                        <pre><code class="hljs ruby">components/
+<span class="hljs-params">|- MyButton.vue
+|</span>- VueTable.vue
+<span class="hljs-params">|- Icon.vue
+</span></code></pre>
+                                        <h5 id="4-和父组件紧密耦合的子组件应该以父组件名作为前缀命名">4) 和父组件紧密耦合的子组件应该以父组件名作为前缀命名</h5>
+                                        <p>正例：</p>
+                                        <pre><code class="hljs cpp">components/
+|- todo-<span class="hljs-built_in">list</span>.vue
+|- todo-<span class="hljs-built_in">list</span>-item.vue
+|- todo-<span class="hljs-built_in">list</span>-item-button.vue
+|- user-profile-options.vue （完整单词）
+</code></pre>
+                                        <p>反例：</p>
+                                        <pre><code class="hljs ruby">components/
+<span class="hljs-params">|- TodoList.vue
+|</span>- TodoItem.vue
+<span class="hljs-params">|- TodoButton.vue
+|</span>- UProfOpts.vue （使用了缩写）
+</code></pre>
+                                        <h5 id="5-在-template-模版中使用组件，应使用-pascalcase-模式，并且使用自闭合组件。">5) 在 Template
+                                            模版中使用组件，应使用
+                                            PascalCase 模式，并且使用自闭合组件。</h5>
+                                        <p>正例：</p>
+                                        <pre><code class="hljs xml"><span class="hljs-comment">&lt;!-- 在单文件组件、字符串模板和 JSX 中 --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">MyComponent</span> /&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">Row</span>&gt;</span><span class="hljs-tag">&lt;<span
+                                                    class="hljs-name">table</span> <span
+                                                    class="hljs-attr">:column</span>=<span
+                                                    class="hljs-string">"data"</span>/&gt;</span><span
+                                                    class="hljs-tag">&lt;/<span class="hljs-name">Row</span>&gt;</span>
+</code></pre>
+                                        <p>反例：</p>
+                                        <pre><code class="hljs ruby">&lt;my-component /&gt; &lt;row&gt;&lt;table <span
+                                                class="hljs-symbol">:column=<span class="hljs-string">"data"</span>/&gt;&lt;/row&gt;</span>
+</code></pre>
+                                        <h5 id="6-组件的-data-必须是一个函数">6) 组件的 data 必须是一个函数</h5>
+                                        <p>当在组件中使用 data 属性的时候 (除了 new Vue 外的任何地方)，它的值必须是返回一个对象的函数。
+                                            因为如果直接是一个对象的话，子组件之间的属性值会互相影响。</p>
+                                        <p>正例：</p>
+                                        <pre><code class="hljs haskell"><span class="hljs-title">export</span> <span
+                                                class="hljs-keyword">default</span> {
+  <span class="hljs-class"><span class="hljs-keyword">data</span> () {
+    <span class="hljs-title">return</span> {
+      <span class="hljs-title">name</span>: '<span class="hljs-title">jack'</span>
+    }</span>
+  }
+}
+</code></pre>
+                                        <p>反例：</p>
+                                        <pre><code class="hljs css"><span class="hljs-selector-tag">export</span> <span
+                                                class="hljs-selector-tag">default</span> {
+  <span class="hljs-attribute">data</span>: {
+    name: <span class="hljs-string">'jack'</span>
+  }
+}
+</code></pre>
+                                        <h5 id="7-prop-定义应该尽量详细">7) Prop 定义应该尽量详细</h5>
+                                        <ul>
+                                            <li>必须使用 camelCase 驼峰命名</li>
+                                            <li>必须指定类型</li>
+                                            <li>必须加上注释，表明其含义</li>
+                                            <li>必须加上 required 或者 default，两者二选其一</li>
+                                            <li>如果有业务需要，必须加上 validator 验证</li>
+                                        </ul>
+                                        <p>正例：</p>
+                                        <pre><code class="hljs javascript"> props: {
+  <span class="hljs-comment">// 组件状态，用于控制组件的颜色</span>
+   <span class="hljs-attr">status</span>: {
+     <span class="hljs-attr">type</span>: <span class="hljs-built_in">String</span>,
+     <span class="hljs-attr">required</span>: <span class="hljs-literal">true</span>,
+     <span class="hljs-attr">validator</span>: <span class="hljs-function"><span
+                                                    class="hljs-keyword">function</span> (<span
+                                                    class="hljs-params">value</span>) </span>{
+       <span class="hljs-keyword">return</span> [
+         <span class="hljs-string">'succ'</span>,
+         <span class="hljs-string">'info'</span>,
+         <span class="hljs-string">'error'</span>
+       ].indexOf(value) !== -<span class="hljs-number">1</span>
+     }
+   },
+    <span class="hljs-comment">// 用户级别，用于显示皇冠个数</span>
+   userLevel：{
+      <span class="hljs-attr">type</span>: <span class="hljs-built_in">String</span>,
+      <span class="hljs-attr">required</span>: <span class="hljs-literal">true</span>
+   }
+}
+</code></pre>
+                                        <h5 id="8-为组件样式设置作用域">8) 为组件样式设置作用域</h5>
+                                        <p>正例：</p>
+                                        <pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span
+          class="hljs-string">"btn btn-close"</span>&gt;</span>X<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- 使用 `scoped` 特性 --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span> <span class="hljs-attr">scoped</span>&gt;</span><span
+                                                    class="css">
+  <span class="hljs-selector-class">.btn-close</span> {
+    <span class="hljs-attribute">background-color</span>: red;
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+</code></pre>
+                                        <p>反例：</p>
+                                        <pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span
+          class="hljs-string">"btn btn-close"</span>&gt;</span>X<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+<span class="hljs-comment">&lt;!-- 没有使用 `scoped` 特性 --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+  <span class="hljs-selector-class">.btn-close</span> {
+    <span class="hljs-attribute">background-color</span>: red;
+  }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+</code></pre>
+                                        <h5 id="9-如果特性元素较多，应该主动换行。">9) 如果特性元素较多，应该主动换行。</h5>
+                                        <p>正例：</p>
+                                        <pre><code class="hljs smalltalk">&lt;<span class="hljs-type">MyComponent</span> foo=<span
+                                                class="hljs-comment">"a"</span> bar=<span
+                                                class="hljs-comment">"b"</span> baz=<span
+                                                class="hljs-comment">"c"</span>
+    foo=<span class="hljs-comment">"a"</span> bar=<span class="hljs-comment">"b"</span> baz=<span class="hljs-comment">"c"</span>
+    foo=<span class="hljs-comment">"a"</span> bar=<span class="hljs-comment">"b"</span> baz=<span class="hljs-comment">"c"</span>
+ /&gt;
+</code></pre>
+                                        <p>反例：</p>
+                                        <pre><code class="hljs smalltalk">&lt;<span class="hljs-type">MyComponent</span> foo=<span
+                                                class="hljs-comment">"a"</span> bar=<span
+                                                class="hljs-comment">"b"</span> baz=<span
+                                                class="hljs-comment">"c"</span> foo=<span
+                                                class="hljs-comment">"a"</span> bar=<span
+                                                class="hljs-comment">"b"</span> baz=<span
+                                                class="hljs-comment">"c"</span> foo=<span
+                                                class="hljs-comment">"a"</span> bar=<span
+                                                class="hljs-comment">"b"</span> baz=<span
+                                                class="hljs-comment">"c"</span> foo=<span
+                                                class="hljs-comment">"a"</span> bar=<span
+                                                class="hljs-comment">"b"</span> baz=<span
+                                                class="hljs-comment">"c"</span>/&gt;
+</code></pre>
+                                        <h4 id="212-模板中使用简单的表达式">2.1.2. 模板中使用简单的表达式</h4>
+                                        <p>
+                                            组件模板应该只包含简单的表达式，复杂的表达式则应该重构为计算属性或方法。复杂表达式会让你的模板变得不那么声明式。我们应该尽量描述应该出现的是什么，而非如何计算那个值。而且计算属性和方法使得代码可以重用。</p>
+                                        <p>正例：</p>
+                                        <pre><code class="hljs javascript">&lt;template&gt;
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>{{ normalizedFullName }}<span
+          class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span>
+&lt;/template&gt;
+
+<span class="hljs-comment">// 复杂表达式已经移入一个计算属性</span>
+computed: {
+  <span class="hljs-attr">normalizedFullName</span>: <span class="hljs-function"><span
+                                                    class="hljs-keyword">function</span> (<span
+                                                    class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.fullName.split(<span
+                                                    class="hljs-string">' '</span>).map(<span
+                                                    class="hljs-function"><span
+                                                    class="hljs-keyword">function</span> (<span
+                                                    class="hljs-params">word</span>) </span>{
+      <span class="hljs-keyword">return</span> word[<span class="hljs-number">0</span>].toUpperCase() + word.slice(<span
+                                                    class="hljs-number">1</span>)
+    }).join(<span class="hljs-string">' '</span>)
+  }
+}
+</code></pre>
+                                        <p>反例：</p>
+                                        <pre><code class="hljs lua">&lt;template&gt;
+  &lt;p&gt;
+       {{
+          fullName.split(<span class="hljs-string">' '</span>).map(<span class="hljs-function"><span
+                                                    class="hljs-keyword">function</span> <span
+                                                    class="hljs-params">(word)</span></span> {
+             <span class="hljs-keyword">return</span> word[<span class="hljs-number">0</span>].toUpperCase() + word.slice(<span
+                                                    class="hljs-number">1</span>)
+           }).join(<span class="hljs-string">' '</span>)
+        }}
+  &lt;/p&gt;
+&lt;/template&gt;
+</code></pre>
+                                        <h4 id="213-指令都使用缩写形式">2.1.3 指令都使用缩写形式</h4>
+                                        <p>指令推荐都使用缩写形式，(用 : 表示 v-bind: 、用 @ 表示 v-on: 和用 # 表示 v-slot:)</p>
+                                        <p>正例：</p>
+                                        <pre><code class="hljs coffeescript">&lt;input
+  @input=<span class="hljs-string">"onInput"</span>
+  @focus=<span class="hljs-string">"onFocus"</span>
+&gt;
+</code></pre>
+                                        <p>反例：</p>
+                                        <pre><code class="hljs lua">&lt;<span class="hljs-built_in">input</span>
+  v-on:<span class="hljs-built_in">input</span>=<span class="hljs-string">"onInput"</span>
+  @focus=<span class="hljs-string">"onFocus"</span>
+&gt;
+</code></pre>
+                                        <h4 id="214-标签顺序保持一致">2.1.4 标签顺序保持一致</h4>
+                                        <p>单文件组件应该总是让标签顺序保持为 `</p>
+                                        <p>正例：</p>
+                                        <pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>...<span
+                                                class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span>...<span class="hljs-tag">&lt;/<span
+                                                    class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span>...<span class="hljs-tag">&lt;/<span
+                                                    class="hljs-name">style</span>&gt;</span>
+</code></pre>
+                                        <p>反例：</p>
+                                        <pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>...<span
+                                                class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span>...<span class="hljs-tag">&lt;/<span
+                                                    class="hljs-name">style</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span>...<span class="hljs-tag">&lt;/<span
+                                                    class="hljs-name">script</span>&gt;</span>
+</code></pre>
+                                        <h4 id="215-必须为-v-for-设置键值-key">2.1.5 必须为 v-for 设置键值 key</h4>
+                                        <h4 id="216-v-show-与-v-if-选择">2.1.6 v-show 与 v-if 选择</h4>
+                                        <p>如果运行时，需要非常频繁地切换，使用 v-show ；如果在运行时，条件很少改变，使用 v-if。</p>
+                                        <h4 id="217-script-标签内部结构顺序">2.1.7 script 标签内部结构顺序</h4>
+                                        <p>components &gt; props &gt; data &gt; computed &gt; watch &gt; filter &gt;
+                                            钩子函数（钩子函数按其执行顺序） &gt; methods</p>
+                                        <h4 id="218-vue-router-规范">2.1.8 Vue Router 规范</h4>
+                                        <h5 id="1-页面跳转数据传递使用路由参数">1) 页面跳转数据传递使用路由参数</h5>
+                                        <p>页面跳转，例如 A 页面跳转到 B 页面，需要将 A 页面的数据传递到 B 页面，推荐使用 路由参数进行传参，而不是将需要传递的数据保存 vuex，然后在
+                                            B
+                                            页面取出 vuex 的数据，因为如果在 B 页面刷新会导致 vuex 数据丢失，导致 B 页面无法正常显示数据。</p>
+                                        <p>正例：</p>
+                                        <pre><code class="hljs objectivec">let <span
+                                                class="hljs-keyword">id</span> = <span
+                                                class="hljs-string">' 123'</span>;
+<span class="hljs-keyword">this</span>.$router.push({ name: <span
+                                                    class="hljs-string">'userCenter'</span>, query: { <span
+                                                    class="hljs-keyword">id</span>: <span class="hljs-keyword">id</span> } });
+</code></pre>
+                                        <h5 id="2-使用路由懒加载（延迟加载）机制">2) 使用路由懒加载（延迟加载）机制</h5>
+                                        <pre><code class="hljs coffeescript">    {
+        path: <span class="hljs-string">'/uploadAttachment'</span>,
+        name: <span class="hljs-string">'uploadAttachment'</span>,
+        meta: {
+          title: <span class="hljs-string">'上传附件'</span>
+        },
+        component: <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span
+                                                    class="hljs-keyword">import</span>(<span class="hljs-string">'@/view/components/uploadAttachment/index.vue'</span>)
+      },
+</code></pre>
+                                        <h5 id="3-router-中的命名规范">3) router 中的命名规范</h5>
+                                        <p>path、childrenPoints 命名规范采用<code>kebab-case</code>命名规范（尽量vue文件的目录结构保持一致，因为目录、文件名都是<code>kebab-case</code>，这样很方便找到对应的文件）
+                                        </p>
+                                        <p>name 命名规范采用<code>KebabCase</code>命名规范且和component组件名保持一致！（因为要保持keep-alive特性，keep-alive按照component的name进行缓存，所以两者必须高度保持一致）
+                                        </p>
+                                        <pre><code class="hljs properties"><span class="hljs-meta">//</span> <span
+                                                class="hljs-string">动态加载</span>
+<span class="hljs-attr">export</span> <span class="hljs-string">const reload = [</span>
+  <span class="hljs-attr">{</span>
+    <span class="hljs-attr">path</span>: <span class="hljs-string">'/reload',</span>
+    <span class="hljs-attr">name</span>: <span class="hljs-string">'reload',</span>
+    <span class="hljs-attr">component</span>: <span class="hljs-string">Main,</span>
+    <span class="hljs-attr">meta</span>: <span class="hljs-string">{</span>
+      <span class="hljs-attr">title</span>: <span class="hljs-string">'动态加载',</span>
+      <span class="hljs-attr">icon</span>: <span class="hljs-string">'icon iconfont'</span>
+    <span class="hljs-attr">},</span>
+
+    <span class="hljs-attr">children</span>: <span class="hljs-string">[</span>
+      <span class="hljs-attr">{</span>
+        <span class="hljs-attr">path</span>: <span class="hljs-string">'/reload/smart-reload-list',</span>
+        <span class="hljs-attr">name</span>: <span class="hljs-string">'SmartReloadList',</span>
+        <span class="hljs-attr">meta</span>: <span class="hljs-string">{</span>
+          <span class="hljs-attr">title</span>: <span class="hljs-string">'SmartReload',</span>
+          <span class="hljs-attr">childrenPoints</span>: <span class="hljs-string">[</span>
+            <span class="hljs-attr">{</span>
+              <span class="hljs-attr">title</span>: <span class="hljs-string">'查询',</span>
+              <span class="hljs-attr">name</span>: <span class="hljs-string">'smart-reload-search'</span>
+            <span class="hljs-attr">},</span>
+            <span class="hljs-attr">{</span>
+              <span class="hljs-attr">title</span>: <span class="hljs-string">'执行reload',</span>
+              <span class="hljs-attr">name</span>: <span class="hljs-string">'smart-reload-update'</span>
+            <span class="hljs-attr">},</span>
+            <span class="hljs-attr">{</span>
+              <span class="hljs-attr">title</span>: <span class="hljs-string">'查看执行结果',</span>
+              <span class="hljs-attr">name</span>: <span class="hljs-string">'smart-reload-result'</span>
+            <span class="hljs-attr">}</span>
+          <span class="hljs-attr">]</span>
+        <span class="hljs-attr">},</span>
+        <span class="hljs-attr">component</span>: <span class="hljs-string">() =&gt;</span>
+          <span class="hljs-attr">import('@/views/reload/smart-reload/smart-reload-list.vue')</span>
+      <span class="hljs-attr">}</span>
+    <span class="hljs-attr">]</span>
+  <span class="hljs-attr">}</span>
+<span class="hljs-attr">];</span>
+</code></pre>
+                                        <h5 id="4-router-中的-path-命名规范">4) router 中的 path 命名规范</h5>
+                                        <p>path除了采用<code>kebab-case</code>命名规范以外，必须以 / 开头，即使是children里的path也要以 / 开头。如下示例
+                                        </p>
+                                        <ul>
+                                            <li></li>
+                                        </ul>
+                                        <p>目的：</p>
+                                        <p>
+                                            经常有这样的场景：某个页面有问题，要立刻找到这个vue文件，如果不用以/开头，path为parent和children组成的，可能经常需要在router文件里搜索多次才能找到，而如果以/开头，则能立刻搜索到对应的组件<br>
+                                            *</p>
+                                        <pre><code class="hljs coffeescript">{
+    path: <span class="hljs-string">'/file'</span>,
+    name: <span class="hljs-string">'File'</span>,
+    component: Main,
+    meta: {
+      title: <span class="hljs-string">'文件服务'</span>,
+      icon: <span class="hljs-string">'ios-cloud-upload'</span>
+    },
+    children: [
+      {
+        path: <span class="hljs-string">'/file/file-list'</span>,
+        name: <span class="hljs-string">'FileList'</span>,
+        component: <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span
+                                                    class="hljs-keyword">import</span>(<span class="hljs-string">'@/views/file/file-list.vue'</span>)
+      },
+      {
+        path: <span class="hljs-string">'/file/file-add'</span>,
+        name: <span class="hljs-string">'FileAdd'</span>,
+        component: <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span
+                                                    class="hljs-keyword">import</span>(<span class="hljs-string">'@/views/file/file-add.vue'</span>)
+      },
+      {
+        path: <span class="hljs-string">'/file/file-update'</span>,
+        name: <span class="hljs-string">'FileUpdate'</span>,
+        component: <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span
+                                                    class="hljs-keyword">import</span>(<span class="hljs-string">'@/views/file/file-update.vue'</span>)
+      }
+    ]
+  }
+</code></pre>
+                                        <h3 id="二-vue-项目目录规范">(二) Vue 项目目录规范</h3>
+                                        <h4 id="221-基础">2.2.1 基础</h4>
+                                        <p>vue 项目中的所有命名一定要与后端命名统一。</p>
+                                        <p>比如权限：后端 privilege, 前端无论 router , store, api 等都必须使用 privielege 单词！</p>
+                                        <h4 id="222-使用-vue-cli-脚手架">2.2.2 使用 Vue-cli 脚手架</h4>
+                                        <p>使用 vue-cli3 来初始化项目，项目名按照上面的命名规范。</p>
+                                        <h4 id="223-目录说明">2.2.3 目录说明</h4>
+                                        <p>目录名按照上面的命名规范，其中 components 组件用大写驼峰，其余除 components 组件目录外的所有目录均使用 kebab-case
+                                            命名。</p>
+                                        <pre><code class="hljs lua">src                               源码目录
+|<span class="hljs-comment">-- api                              所有api接口</span>
+|<span class="hljs-comment">-- assets                           静态资源，images, icons, styles等</span>
+|<span class="hljs-comment">-- components                       公用组件</span>
+|<span class="hljs-comment">-- config                           配置信息</span>
+|<span class="hljs-comment">-- constants                        常量信息，项目所有Enum, 全局常量等</span>
+|<span class="hljs-comment">-- directives                       自定义指令</span>
+|<span class="hljs-comment">-- filters                          过滤器，全局工具</span>
+|<span class="hljs-comment">-- datas                            模拟数据，临时存放</span>
+|<span class="hljs-comment">-- lib                              外部引用的插件存放及修改文件</span>
+|<span class="hljs-comment">-- mock                             模拟接口，临时存放</span>
+|<span class="hljs-comment">-- plugins                          插件，全局使用</span>
+|<span class="hljs-comment">-- router                           路由，统一管理</span>
+|<span class="hljs-comment">-- store                            vuex, 统一管理</span>
+|<span class="hljs-comment">-- themes                           自定义样式主题</span>
+|<span class="hljs-comment">-- views                            视图目录</span>
+|   |<span class="hljs-comment">-- role                             role模块名</span>
+|   |<span class="hljs-comment">-- |-- role-list.vue                    role列表页面</span>
+|   |<span class="hljs-comment">-- |-- role-add.vue                     role新建页面</span>
+|   |<span class="hljs-comment">-- |-- role-update.vue                  role更新页面</span>
+|   |<span class="hljs-comment">-- |-- index.less                      role模块样式</span>
+|   |<span class="hljs-comment">-- |-- components                      role模块通用组件文件夹</span>
+|   |<span class="hljs-comment">-- employee                         employee模块</span>
+</code></pre>
+                                        <h5 id="1-api-目录">1) api 目录</h5>
+                                        <ul>
+                                            <li>文件、变量命名要与后端保持一致。</li>
+                                            <li>此目录对应后端 API 接口，按照后端一个 controller 一个 api js
+                                                文件。若项目较大时，可以按照业务划分子目录，并与后端保持一致。
+                                            </li>
+                                            <li>api 中的方法名字要与后端 api url 尽量保持语义高度一致性。</li>
+                                            <li>对于 api 中的每个方法要添加注释，注释与后端 swagger 文档保持一致。</li>
+                                        </ul>
+                                        <p>正例：</p>
+                                        <p>后端 url： EmployeeController.java</p>
+                                        <pre><code class="hljs sql">/employee/add
+/employee/<span class="hljs-keyword">delete</span>/{<span class="hljs-keyword">id</span>}
+/employee/<span class="hljs-keyword">update</span>
+</code></pre>
+                                        <p>前端： employee.js</p>
+                                        <pre><code class="hljs kotlin">  <span class="hljs-comment">// 添加员工</span>
+  addEmployee: (<span class="hljs-keyword">data</span>) =&gt; {
+    <span class="hljs-keyword">return</span> postAxios(<span class="hljs-string">'/employee/add'</span>, <span
+                                                    class="hljs-keyword">data</span>)
+  },
+  <span class="hljs-comment">// 更新员工信息</span>
+  updateEmployee: (<span class="hljs-keyword">data</span>) =&gt; {
+    <span class="hljs-keyword">return</span> postAxios(<span class="hljs-string">'/employee/update'</span>, <span
+                                                    class="hljs-keyword">data</span>)
+  },
+    <span class="hljs-comment">// 删除员工</span>
+  deleteEmployee: (employeeId) =&gt; {
+    <span class="hljs-keyword">return</span> postAxios(<span class="hljs-string">'/employee/delete/'</span> + employeeId)
+   },
+</code></pre>
+                                        <h5 id="2-assets-目录">2) assets 目录</h5>
+                                        <p>assets 为静态资源，里面存放 images, styles, icons 等静态资源，静态资源命名格式为 kebab-case</p>
+                                        <pre><code class="hljs lua">|assets
+|<span class="hljs-comment">-- icons</span>
+|<span class="hljs-comment">-- images</span>
+|   |<span class="hljs-comment">-- background-color.png</span>
+|   |<span class="hljs-comment">-- upload-header.png</span>
+|<span class="hljs-comment">-- styles</span>
+</code></pre>
+                                        <h5 id="3-components-目录">3) components 目录</h5>
+                                        <p>此目录应按照组件进行目录划分，目录命名为 KebabCase，组件命名规则也为 KebabCase</p>
+                                        <pre><code class="hljs lua">|components
+|<span class="hljs-comment">-- error-log</span>
+|   |<span class="hljs-comment">-- index.vue</span>
+|   |<span class="hljs-comment">-- index.less</span>
+|<span class="hljs-comment">-- markdown-editor</span>
+|   |<span class="hljs-comment">-- index.vue</span>
+|   |<span class="hljs-comment">-- index.js</span>
+|<span class="hljs-comment">-- kebab-case</span>
+</code></pre>
+                                        <h5 id="4-constants-目录">4) constants 目录</h5>
+                                        <p>此目录存放项目所有常量，如果常量在 vue 中使用，请使用 vue-enum 插件(<a
+                                                href="https://www.npmjs.com/package/vue-enum" target="_blank">https://www.npmjs.com/package/vue-enum</a>)
+                                        </p>
+                                        <p>目录结构：</p>
+                                        <pre><code class="hljs lua">|constants
+|<span class="hljs-comment">-- index.js</span>
+|<span class="hljs-comment">-- role.js</span>
+|<span class="hljs-comment">-- employee.js</span>
+</code></pre>
+                                        <p>例子： employee.js</p>
+                                        <pre><code class="hljs yaml"><span class="hljs-string">export</span> <span
+                                                class="hljs-string">const</span> <span
+                                                class="hljs-string">EMPLOYEE_STATUS</span> <span
+                                                class="hljs-string">=</span> {
+  <span class="hljs-attr">NORMAL:</span> {
+    <span class="hljs-attr">value:</span> <span class="hljs-number">1</span>,
+    <span class="hljs-attr">desc:</span> <span class="hljs-string">'正常'</span>
+  },
+  <span class="hljs-attr">DISABLED:</span> {
+    <span class="hljs-attr">value:</span> <span class="hljs-number">1</span>,
+    <span class="hljs-attr">desc:</span> <span class="hljs-string">'禁用'</span>
+  },
+  <span class="hljs-attr">DELETED:</span> {
+    <span class="hljs-attr">value:</span> <span class="hljs-number">2</span>,
+    <span class="hljs-attr">desc:</span> <span class="hljs-string">'已删除'</span>
+  }
+}<span class="hljs-string">;</span>
+
+<span class="hljs-string">export</span> <span class="hljs-string">const</span> <span class="hljs-string">EMPLOYEE_ACCOUNT_TYPE</span> <span
+                                                    class="hljs-string">=</span> {
+  <span class="hljs-attr">QQ:</span> {
+    <span class="hljs-attr">value:</span> <span class="hljs-number">1</span>,
+    <span class="hljs-attr">desc:</span> <span class="hljs-string">'QQ登录'</span>
+  },
+  <span class="hljs-attr">WECHAT:</span> {
+    <span class="hljs-attr">value:</span> <span class="hljs-number">2</span>,
+    <span class="hljs-attr">desc:</span> <span class="hljs-string">'微信登录'</span>
+  },
+  <span class="hljs-attr">DINGDING:</span> {
+    <span class="hljs-attr">value:</span> <span class="hljs-number">3</span>,
+    <span class="hljs-attr">desc:</span> <span class="hljs-string">'钉钉登录'</span>
+  },
+  <span class="hljs-attr">USERNAME:</span> {
+    <span class="hljs-attr">value:</span> <span class="hljs-number">4</span>,
+    <span class="hljs-attr">desc:</span> <span class="hljs-string">'用户名密码登录'</span>
+  }
+}<span class="hljs-string">;</span>
+
+<span class="hljs-string">export</span> <span class="hljs-string">default</span> {
+  <span class="hljs-string">EMPLOYEE_STATUS</span>,
+  <span class="hljs-string">EMPLOYEE_ACCOUNT_TYPE</span>
+}<span class="hljs-string">;</span>
+</code></pre>
+                                        <h5 id="5-router-与-store-目录">5) router 与 store 目录</h5>
+                                        <p>这两个目录一定要将业务进行拆分，不能放到一个 js 文件里。</p>
+                                        <p>router 尽量按照 views 中的结构保持一致</p>
+                                        <p>store 按照业务进行拆分不同的 js 文件</p>
+                                        <h5 id="6-views-目录">6) views 目录</h5>
+                                        <ul>
+                                            <li>命名要与后端、router、api 等保持一致</li>
+                                            <li>components 中组件要使用 PascalCase 规则</li>
+                                        </ul>
+                                        <pre><code class="hljs ruby"><span class="hljs-params">|-- views                            视图目录
+|</span>   <span class="hljs-params">|-- role                             role模块名
+|</span>   <span class="hljs-params">|   |</span>-- role-list.vue                    role列表页面
+<span class="hljs-params">|   |</span>   <span class="hljs-params">|-- role-add.vue                     role新建页面
+|</span>   <span class="hljs-params">|   |</span>-- role-update.vue                  role更新页面
+<span class="hljs-params">|   |</span>   <span class="hljs-params">|-- index.less                      role模块样式
+|</span>   <span class="hljs-params">|   |</span>-- components                      role模块通用组件文件夹
+<span class="hljs-params">|   |</span>   <span class="hljs-params">|   |</span>-- role-header.vue                        role头部组件
+<span class="hljs-params">|   |</span>   <span class="hljs-params">|   |</span>-- role-modal.vue                         role弹出框组件
+<span class="hljs-params">|   |</span>-- employee                         employee模块
+<span class="hljs-params">|   |</span>-- behavior-log                      行为日志log模块
+<span class="hljs-params">|   |</span>-- code-generator                    代码生成器模块
+</code></pre>
+                                        <h4 id="224-注释说明">2.2.4 注释说明</h4>
+                                        <p>整理必须加注释的地方</p>
+                                        <ul>
+                                            <li>公共组件使用说明</li>
+                                            <li>api 目录的接口 js 文件必须加注释</li>
+                                            <li>store 中的 state, mutation, action 等必须加注释</li>
+                                            <li>vue 文件中的 template 必须加注释，若文件较大添加 start end 注释</li>
+                                            <li>vue 文件的 methods，每个 method 必须添加注释</li>
+                                            <li>vue 文件的 data, 非常见单词要加注释</li>
+                                        </ul>
+                                        <h4 id="225-其他">2.2.5 其他</h4>
+                                        <h5 id="1-尽量不要手动操作-dom">1) 尽量不要手动操作 DOM</h5>
+                                        <p>因使用 vue 框架，所以在项目开发中尽量使用 vue 的数据驱动更新 DOM，尽量（不到万不得已）不要手动操作 DOM，包括：增删改 dom
+                                            元素、以及更改样式、添加事件等。</p>
+                                        <h5 id="2-删除无用代码">2) 删除无用代码</h5>
+                                        <p>因使用了 git/svn 等代码版本工具，对于无用代码必须及时删除，例如：一些调试的 console 语句、无用的弃用功能代码。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="clear"></div>
+    </div><!--end: main -->
+    <div class="clear"></div>
+
+</div>
+</body>
+<style>
+    /* 更改访问过的 a 标签的颜色 */
+    #cnblogs_post_body a:visited,
+    #cnblogs_post_body a:link {
+        color: #2daebf;
+    }
+
+    /* 隐藏广告 */
+    #ad_t2, #cnblogs_c1, #under_post_news, #cnblogs_c2, #under_post_kb, #HistoryToday {
+        display: none;
+    }
+
+    #footer {
+        margin-top: 0px;
+    }
+
+    /* 评论框太小 bug 修复 */
+    #comment_form_container .comment_textarea {
+        width: 450px;
+    }
+
+    /* 限制 markdown 代码块高度 */
+    .cnblogs-markdown code, .cnblogs-post-body code {
+        padding: 2px 4px !important;
+        color: #d83b64;
+        background-color: #f9f2f4 !important;
+        border-radius: 3px !important;
+        border: 0 !important;
+        text-indent: 0 !important;
+        position: relative;
+        bottom: 1px;
+        max-height: 500px;
+    }
+
+    /* 引言格式 */
+    blockquote {
+        line-height: 20px;
+        margin: 0 0 24px 0;
+        padding: 1.3em;
+        color: #313131;
+        background-color: #f7f7f7;
+        font-size: 13px;
+        border-left: 4px solid #ddd;
+        font-weight: 400;
+        border-top: 0;
+        border-right: 0;
+        border-bottom: 0;
+        min-height: 0
+    }
+
+    blockquote p {
+        margin: 0 !important;
+        padding: 0;
+        text-indent: 0 !important
+    }
+
+    .postBody blockquote {
+        background-image: none;
+        background-color: #f7f7f7;
+        min-height: auto;
+    }
+
+    /* 自定义标题颜色方便区分 */
+    #cnblogs_post_body h1 {
+        color: #3c70a4;
+    }
+
+    #cnblogs_post_body h2 {
+        color: #64b2cd;
+    }
+
+    #cnblogs_post_body h3 {
+        color: #347474;
+    }
+
+    #cnblogs_post_body h4 {
+        color: #42b883;
+    }
+
+    #cnblogs_post_body h5 {
+        color: #363863;
+    }
+
+    #cnblogs_post_body h6 {
+        color: #635270;
+    }
+
+    /* 标题前缀（让标题更显目） */
+    #cnblogs_post_body h1::before,
+    #cnblogs_post_body h2::before,
+    #cnblogs_post_body h3::before,
+    #cnblogs_post_body h4::before,
+    #cnblogs_post_body h5::before,
+    #cnblogs_post_body h6::before {
+        content: "▋";
+    }
+
+    #cnblogs_post_body h1,
+    #cnblogs_post_body h2,
+    #cnblogs_post_body h3,
+    #cnblogs_post_body h4,
+    #cnblogs_post_body h5,
+    #cnblogs_post_body h6 {
+        background-color: #e3e7f1;
+        /* 调试着看(color hunt 上找个差不多的灰色) */
+        border-radius: 3px;
+        box-shadow: 10px 10px 5px #888888
+    }
+
+
+    /*
+    #cnblogs_post_body h1::before {
+        content: "Ⅰ ";
+    }
+    #cnblogs_post_body h2::before {
+        content: "Ⅱ ";
+    }
+    #cnblogs_post_body h3::before {
+        content: "Ⅲ ";
+    }
+    #cnblogs_post_body h4::before {
+        content: "Ⅳ ";
+    }
+    #cnblogs_post_body h5::before {
+        content: "Ⅴ ";
+    }
+    #cnblogs_post_body h6::before {
+        content: "Ⅵ ";
+    }
+    */
+
+
+    /* 整篇博客字体调整 */
+    body {
+        font-family: -apple-system, SF UI Text, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif;
+    }
+
+    /* 博客目录样式 */
+    #cnblogs_post_body ul {
+        margin-top: 5px;
+        padding-left: 0;
+    }
+
+    .postBody li, .postCon li {
+        margin-bottom: .5em;
+    }
+
+    #cnblogs_post_body a:link {
+        color: #2daebf;
+        text-decoration: none;
+    }
+
+
+    /* 侧边栏标题前缀 */
+    #sideBar h1::before,
+    #sideBar h2::before,
+    #sideBar h3::before,
+    #sideBar h4::before,
+    #sideBar h5::before,
+    #sideBar h6::before {
+        content: "▋";
+    }
+
+    /* 自定义标题颜色方便区分 */
+    #sideBar h1 {
+        color: #3c70a4;
+    }
+
+    #sideBar h2 {
+        color: #64b2cd;
+    }
+
+    #sideBar h3 {
+        color: #347474;
+    }
+
+    #sideBar h4 {
+        color: #42b883;
+    }
+
+    #sideBar h5 {
+        color: #363863;
+    }
+
+    #sideBar h6 {
+        color: #635270;
+    }
+
+
+    pre {
+        padding-top: 1px;
+        border: 1px dashed rgb(170, 170, 170);
+        border-left: 2px solid #42b883;
+    }
+
+    /* 给有序无序列表添加颜色 */
+    /*
+    #cnblogs_post_body li{
+        color: #053f5e;
+    }
+    */
+
+
+    /* 直接拷贝复用之前的样式 -- 让折叠代码更美观 */
+    span.cnblogs_code {
+        border: 0;
+        padding: 2px 4px;
+        color: #d83b64;
+        background-color: #f9f2f4;
+        border-radius: 3px
+    }
+
+    .cnblogs_code {
+        line-height: 20px;
+        margin: 0 auto;
+        width: 94%;
+        font-size: 14px !important;
+        padding: 1.3em;
+        background-color: #f9f9f9;
+        position: relative;
+        overflow: auto;
+        border: 0;
+        font-family: "Source Code Pro", Consolas, Menlo, Monaco, "Courier New", monospace !important;
+        font-weight: 400;
+        margin-bottom: 10px;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1)
+    }
+
+    .cnblogs_code pre {
+        font-size: 14px !important;
+        word-wrap: break-word;
+        white-space: pre-wrap;
+        font-family: "Source Code Pro", Consolas, Menlo, Monaco, "Courier New", monospace !important;
+        font-weight: 400;
+        background-color: #f9f9f9;
+        overflow: auto;
+    }
+
+    .cnblogs_code span {
+        font-family: "Source Code Pro", Consolas, Menlo, Monaco, "Courier New", monospace !important;
+        font-size: 14px !important;
+        font-weight: 400;
+        background-color: #f9f9f9
+    }
+
+    .cnblogs_code div {
+        background-color: #f9f9f9
+    }
+
+    .cnblogs_code_collapse {
+        border: 0;
+        background-color: #f9f9f9;
+        cursor: pointer;
+        color: #555;
+        top: 1px;
+        font-weight: bold;
+        position: relative;
+        font-family: Merriweather, "Open Sans", "Microsoft Jhenghei", "Microsoft Yahei", sans-serif !important;
+        display: inline
+    }
+
+    .cnblogs_code_toolbar {
+        height: 0
+    }
+
+    .cnblogs_code_copy img {
+        display: none
+    }
+
+    .cnblogs_code_copy a {
+        background: url(https://files.cnblogs.com/files/icaihua/copy_16px.gif) top left;
+        background-repeat: no-repeat;
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        right: 19px;
+        top: 19px;
+        opacity: .3
+    }
+
+    .code_img_closed,
+    .code_img_opened {
+        cursor: pointer
+    }
+
+    .cnblogs_code_toolbar a:hover,
+    .cnblogs_code_toolbar a:link,
+    .cnblogs_code_toolbar a:visited,
+    .cnblogs_code_toolbar a:active,
+    .cnblogs_code_toolbar a:link img,
+    .cnblogs_code_toolbar a:visited img {
+        background-color: transparent !important;
+        border: none !important
+    }
+
+
+    /* 清除 markdown样式 对折叠代码块的影响 */
+    .cnblogs_code_hide pre span {
+        background-color: inherit !important;;
+        /*background-color: #f9f9f9;*/
+    }
+
+    .cnblogs_code_hide pre {
+        border: none;
+    }
+</style>
+</html>

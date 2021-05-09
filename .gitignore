@@ -1,0 +1,26 @@
+.DS_Store
+node_modules
+unpackage
+
+# local env files
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+/hs_err_pid1236.log
+/hs_err_pid32884.log
+/hs_err_pid44932.log
+/hs_err_pid50256.log
+/replay_pid50256.log

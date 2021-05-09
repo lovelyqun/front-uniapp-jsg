@@ -1,0 +1,28 @@
+$mc1: #A0D85A; // 主色调
+$mc2: #2CBCF5; // 辅助色调
+$mc3: #FA8B09; // 提亮色
+$mc4: #E5E5E5; // 分割线
+$mc5: #F9FAFB; // 背景色
+$tc1: #111111;
+$tc2: #7A7A7A;
+$tc3: #B3B3B3;
+$fs0: 40rpx;
+$fs1: 36rpx;
+$fs2: 32rpx;
+$fs3: 28rpx;
+$fs4: 26rpx;
+$fs5: 24rpx;
+$ppd: 60rpx;
+$pbc: $mc5;
+:export {
+  mc1: $mc1;
+  mc2: $mc2;
+  mc3: $mc3;
+  mc4: $mc4;
+  mc5: $mc5;
+  tc1: $tc1;
+  tc2: $tc2;
+  tc3: $tc3;
+  pbc: $pbc;
+}
+
