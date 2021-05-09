@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import config from "@/config";
 import card from './modules/card'
-import announce from './modules/announce'
+import announce from './modules/community'
 
 import {
   getAccountInfoApi,

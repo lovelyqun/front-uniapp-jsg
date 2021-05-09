@@ -11,7 +11,7 @@ const TEMPIDS = ['uXcROlNagemyEtg-jgf2Cm6SF7Ge34TTS8ggPbI4MqQ', 'TkCCpXqDqdsGXHK
 const IMG_SRC = `https://wodan-idc.oss-cn-hangzhou.aliyuncs.com/miniProgram/${env === 'production' ? 'prod' : 'test'}/${PACKAGE_NAME}/img/`
 const config = {
   nodeEnv: env === 'production' ? 'production' : 'development',
-  baseUrl: env === 'production' ? PROD_URL : `http://${env}-server-api.shijianke.com`,
+  baseUrl: env === 'production' ? PROD_URL : `http://${env}-server-api11.shijianke.com`,
   spiderUrl: env === 'production' ? SPIDER_PROD_URL : `http://${env}-reptile.shijianke.com`,
   upImageUrl: '/mapi/file/upload',
   packName: PACKAGE_NAME,

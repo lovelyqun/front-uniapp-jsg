@@ -24,21 +24,21 @@
       "path": "pages/index/index",
       "style": {
         "enablePullDownRefresh": true,
-        "navigationStyle": "custom"
+        "navigationBarTitleText":"即时赣"
       }
     },
     {
       "path": "pages/mine/mine",
       "style": {
-        "enablePullDownRefresh": true,
-        "navigationStyle": "custom"
+        "enablePullDownRefresh": true
+  
       }
     },
     {
       "path": "pages/web-view/web-view",
       "style": {
-        "enablePullDownRefresh": true,
-        "navigationStyle": "custom"
+        "enablePullDownRefresh": true
+
       }
     }
   

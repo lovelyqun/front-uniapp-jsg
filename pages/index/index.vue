@@ -1,6 +1,6 @@
 <template>
   <view class="page-container page-index">
-    <u-button>11</u-button>
+
   </view>
 </template>
 
