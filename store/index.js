@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import config from "@/config";
-import card from './modules/card'
+import card from './modules/welfare'
 import announce from './modules/community'
 
 import {

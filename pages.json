@@ -1,7 +1,7 @@
 {
   "easycom": {
     "^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue",
-    "^jk-(.*)": "@/jianke-ui/components/jk-$1/jk-$1.vue"
+    "^jsg-(.*)": "@/jsg-ui/components/jsg-$1/jsg-$1.vue"
   },
   "condition": {
     //模式配置，仅开发期间生效
@@ -25,6 +25,20 @@
       "style": {
         "enablePullDownRefresh": true,
         "navigationBarTitleText":"即时赣"
+      }
+    },
+    {
+      "path": "pages/community/community",
+      "style": {
+        "enablePullDownRefresh": true,
+        "navigationBarTitleText":"社区"
+      }
+    },
+    {
+      "path": "pages/welfare/welfare",
+      "style": {
+        "enablePullDownRefresh": true,
+        "navigationBarTitleText":"福利"
       }
     },
     {
@@ -67,6 +81,18 @@
         "iconPath": "static/main/img/tab-index-icon.png",
         "selectedIconPath": "static/main/img/tab-index-active-icon.png",
         "text": "首页"
+      },
+      {
+        "pagePath": "pages/community/community",
+        "iconPath": "static/main/img/tab-community-icon.png",
+        "selectedIconPath": "static/main/img/tab-community-active-icon.png",
+        "text": "社区"
+      },
+      {
+        "pagePath": "pages/welfare/welfare",
+        "iconPath": "static/main/img/tab-welfare-icon.png",
+        "selectedIconPath": "static/main/img/tab-welfare-active-icon.png",
+        "text": "福利"
       },
       {
         "pagePath": "pages/mine/mine",
